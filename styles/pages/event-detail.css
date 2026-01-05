@@ -24,11 +24,6 @@
   padding: calc(var(--radius) * 1.5);
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none;
-}
-
 .event-hero__title {
   margin: 0;
   line-height: 1.15;
@@ -42,21 +37,6 @@
   border-radius: calc(var(--radius) - 2px);
   border: 1px solid var(--border);
   background: var(--muted);
-}
-
-.event-detail--heritage-week .event-hero__img {
-  view-transition-name: event-thumb-heritage-week;
-}
-
-.event-detail--heritage-week .event-hero__title {
-  view-transition-name: event-title-heritage-week;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .event-detail--heritage-week .event-hero__img,
-  .event-detail--heritage-week .event-hero__title {
-    view-transition-name: none;
-  }
 }
 
 .event-hero__meta {
