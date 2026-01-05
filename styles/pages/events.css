@@ -30,7 +30,7 @@
 }
 
 .events-item {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .events-item__header {
@@ -68,6 +68,11 @@
   border-radius: calc(var(--radius) - 2px);
   border: 1px solid var(--border);
   background: var(--muted);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
 }
 
 .events-meta {

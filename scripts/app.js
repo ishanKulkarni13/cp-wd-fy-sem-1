@@ -98,7 +98,50 @@ function initViewTransitionNavigation() {
 	});
 }
 
+function initViewTransitionEventCards() {
+	const eventsList = document.querySelector('.events-list');
+	if (!eventsList) return;
+
+	const canUseViewTransitions =
+		typeof document !== 'undefined' &&
+		'startViewTransition' in document &&
+		typeof document.startViewTransition === 'function';
+
+	if (!canUseViewTransitions) return;
+
+	eventsList.addEventListener('click', (event) => {
+		if (!(event instanceof MouseEvent)) return;
+		if (event.defaultPrevented) return;
+
+		if (event.button !== 0) return;
+		if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+		const target = event.target;
+		if (!(target instanceof Element)) return;
+
+		const link = target.closest('a.events-item__head[href]');
+		if (!(link instanceof HTMLAnchorElement)) return;
+		if (link.target && link.target.toLowerCase() === '_blank') return;
+
+		const href = link.getAttribute('href');
+		if (!href) return;
+
+		const url = new URL(href, window.location.href);
+		if (url.origin !== window.location.origin) return;
+
+		const sameDocument =
+			url.pathname === window.location.pathname && url.search === window.location.search;
+		if (sameDocument && url.hash) return;
+
+		event.preventDefault();
+		document.startViewTransition(() => {
+			window.location.href = url.href;
+		});
+	});
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	initNavbar();
 	initViewTransitionNavigation();
+	initViewTransitionEventCards();
 });

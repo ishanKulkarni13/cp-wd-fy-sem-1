@@ -10,16 +10,28 @@
 }
 
 .event-hero {
-  display: grid;
-  gap: calc(var(--radius) * 2);
+  max-width: calc(var(--radius) * 130);
+  margin-inline: auto;
 }
 
-.event-hero__media {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--muted);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
+.event-hero__header {
+  padding: 0;
+}
+
+.event-hero__head {
+  display: grid;
+  gap: calc(var(--radius) * 1.5);
+  padding: calc(var(--radius) * 1.5);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
+.event-hero__title {
+  margin: 0;
+  line-height: 1.15;
 }
 
 .event-hero__img {
@@ -27,16 +39,9 @@
   display: block;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-}
-
-.event-hero__content {
-  display: grid;
-  gap: calc(var(--radius) * 1.25);
-}
-
-.event-hero__title {
-  margin: 0;
-  line-height: 1.15;
+  border-radius: calc(var(--radius) - 2px);
+  border: 1px solid var(--border);
+  background: var(--muted);
 }
 
 .event-detail--heritage-week .event-hero__img {
@@ -104,14 +109,5 @@
 
   .event-detail-shell {
     gap: calc(var(--radius) * 4);
-  }
-
-  .event-hero {
-    grid-template-columns: 1.6fr 1fr;
-    align-items: start;
-  }
-
-  .event-hero__content {
-    padding-top: calc(var(--radius) / 2);
   }
 }
