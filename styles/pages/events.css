@@ -1,0 +1,58 @@
+.events {
+  padding: calc(var(--radius) * 3);
+}
+
+.events-shell {
+  max-width: calc(var(--radius) * 150);
+  margin-inline: auto;
+  display: grid;
+  gap: calc(var(--radius) * 4);
+}
+
+.events-header h1 {
+  margin: 0;
+}
+
+.events-intro {
+  margin: calc(var(--radius) * 2) 0 0;
+  max-width: calc(var(--radius) * 125);
+}
+
+.events-list {
+  display: grid;
+  gap: calc(var(--radius) * 2);
+}
+
+.events-title {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.events-meta {
+  margin: 0;
+  display: grid;
+  gap: calc(var(--radius) * 1.5);
+}
+
+.events-meta > div {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: calc(var(--radius) * 2);
+  row-gap: calc(var(--radius) / 2);
+  align-items: baseline;
+}
+
+.events-meta dt {
+  font-weight: 600;
+}
+
+.events-meta dd {
+  margin: 0;
+  color: var(--muted-foreground);
+}
+
+@media (min-width: 48rem) {
+  .events {
+    padding: calc(var(--radius) * 4);
+  }
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/design-system/variables.css" />
     <link rel="stylesheet" href="../styles/design-system/components.css" />
     <link rel="stylesheet" href="../styles/globals.css" />
+    <link rel="stylesheet" href="../styles/pages/events.css" />
   </head>
   <body>
     <!-- Canonical global navbar structure (to be reused across pages) -->
@@ -39,8 +40,85 @@
       </div>
     </nav>
 
-    <main>
-      <h1>Events</h1>
+    <main class="events">
+      <div class="events-shell">
+        <header class="events-header">
+          <h1>Cultural Events and Festivals</h1>
+          <p class="events-intro text-muted">
+            Events bring communities together to experience music, dance, crafts, and heritage. This page lists
+            upcoming programs and festivals supported through cultural initiatives.
+          </p>
+        </header>
+
+        <section class="events-section" aria-label="Upcoming events">
+          <div class="events-list">
+            <article class="card events-item" aria-label="National Heritage Week">
+              <div class="card__header">
+                <h2 class="events-title">National Heritage Week</h2>
+              </div>
+              <div class="card__content">
+                <dl class="events-meta">
+                  <div><dt>Date</dt><dd><time datetime="2026-02-10">10 Feb 2026</time></dd></div>
+                  <div><dt>Location</dt><dd>New Delhi</dd></div>
+                  <div><dt>Overview</dt><dd>A week of public talks, guided walks, and museum activities.</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="card events-item" aria-label="Folk Arts Showcase">
+              <div class="card__header">
+                <h2 class="events-title">Folk Arts Showcase</h2>
+              </div>
+              <div class="card__content">
+                <dl class="events-meta">
+                  <div><dt>Date</dt><dd><time datetime="2026-03-05">05 Mar 2026</time></dd></div>
+                  <div><dt>Location</dt><dd>Jaipur</dd></div>
+                  <div><dt>Overview</dt><dd>Performances and demonstrations from regional folk traditions.</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="card events-item" aria-label="Crafts and Handloom Fair">
+              <div class="card__header">
+                <h2 class="events-title">Crafts and Handloom Fair</h2>
+              </div>
+              <div class="card__content">
+                <dl class="events-meta">
+                  <div><dt>Date</dt><dd><time datetime="2026-04-18">18 Apr 2026</time></dd></div>
+                  <div><dt>Location</dt><dd>Ahmedabad</dd></div>
+                  <div><dt>Overview</dt><dd>Artisan stalls and workshops highlighting traditional craft practices.</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="card events-item" aria-label="Classical Music Evening">
+              <div class="card__header">
+                <h2 class="events-title">Classical Music Evening</h2>
+              </div>
+              <div class="card__content">
+                <dl class="events-meta">
+                  <div><dt>Date</dt><dd><time datetime="2026-06-12">12 Jun 2026</time></dd></div>
+                  <div><dt>Location</dt><dd>Kolkata</dd></div>
+                  <div><dt>Overview</dt><dd>A curated concert featuring leading classical vocal and instrumental artists.</dd></div>
+                </dl>
+              </div>
+            </article>
+
+            <article class="card events-item" aria-label="Museum Education Day">
+              <div class="card__header">
+                <h2 class="events-title">Museum Education Day</h2>
+              </div>
+              <div class="card__content">
+                <dl class="events-meta">
+                  <div><dt>Date</dt><dd><time datetime="2026-08-21">21 Aug 2026</time></dd></div>
+                  <div><dt>Location</dt><dd>Bengaluru</dd></div>
+                  <div><dt>Overview</dt><dd>Workshops and sessions for students, educators, and families.</dd></div>
+                </dl>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
     </main>
 
     <script src="../scripts/app.js" defer></script>
