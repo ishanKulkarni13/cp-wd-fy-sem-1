@@ -1,0 +1,57 @@
+.about {
+	padding: calc(var(--radius) * 3);
+}
+
+.about-shell {
+	max-width: calc(var(--radius) * 150);
+	margin-inline: auto;
+	display: grid;
+	gap: calc(var(--radius) * 4);
+}
+
+.about-header h1 {
+	margin: 0;
+}
+
+.about-section {
+	display: grid;
+	gap: calc(var(--radius) * 2);
+}
+
+.about-section h2 {
+	margin: 0;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.about-section p {
+	margin: 0;
+	max-width: calc(var(--radius) * 125);
+}
+
+.about-list {
+	margin: 0;
+	padding-left: calc(var(--radius) * 3);
+	display: grid;
+	gap: calc(var(--radius) * 1.5);
+}
+
+.about-grid {
+	display: grid;
+	gap: calc(var(--radius) * 2);
+}
+
+.about-muted {
+	margin: 0;
+	color: var(--muted-foreground);
+}
+
+@media (min-width: 48rem) {
+	.about {
+		padding: calc(var(--radius) * 4);
+	}
+
+	.about-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
