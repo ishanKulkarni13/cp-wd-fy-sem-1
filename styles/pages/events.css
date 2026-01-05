@@ -41,6 +41,23 @@
   display: grid;
   gap: calc(var(--radius) * 1.5);
   padding: calc(var(--radius) * 1.5);
+  color: inherit;
+  text-decoration: none;
+}
+
+.events-item--heritage-week .events-thumb {
+  view-transition-name: event-thumb-heritage-week;
+}
+
+.events-item--heritage-week .events-title {
+  view-transition-name: event-title-heritage-week;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .events-item--heritage-week .events-thumb,
+  .events-item--heritage-week .events-title {
+    view-transition-name: none;
+  }
 }
 
 .events-thumb {

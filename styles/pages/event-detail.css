@@ -1,0 +1,117 @@
+.event-detail {
+  padding: calc(var(--radius) * 3);
+}
+
+.event-detail-shell {
+  max-width: calc(var(--radius) * 160);
+  margin-inline: auto;
+  display: grid;
+  gap: calc(var(--radius) * 3);
+}
+
+.event-hero {
+  display: grid;
+  gap: calc(var(--radius) * 2);
+}
+
+.event-hero__media {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--muted);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.event-hero__img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.event-hero__content {
+  display: grid;
+  gap: calc(var(--radius) * 1.25);
+}
+
+.event-hero__title {
+  margin: 0;
+  line-height: 1.15;
+}
+
+.event-detail--heritage-week .event-hero__img {
+  view-transition-name: event-thumb-heritage-week;
+}
+
+.event-detail--heritage-week .event-hero__title {
+  view-transition-name: event-title-heritage-week;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-detail--heritage-week .event-hero__img,
+  .event-detail--heritage-week .event-hero__title {
+    view-transition-name: none;
+  }
+}
+
+.event-hero__meta {
+  margin: 0;
+  display: grid;
+  gap: calc(var(--radius) * 1);
+}
+
+.event-hero__meta > div {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: calc(var(--radius) * 2);
+  row-gap: calc(var(--radius) / 2);
+  align-items: baseline;
+}
+
+.event-hero__meta dt {
+  font-weight: 600;
+}
+
+.event-hero__meta dd {
+  margin: 0;
+  color: var(--muted-foreground);
+}
+
+.event-content .card__content {
+  display: grid;
+  gap: calc(var(--radius) * 1.5);
+}
+
+.event-content__title {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.event-content__subtitle {
+  margin: calc(var(--radius) / 2) 0 0;
+  font-size: 1.05em;
+}
+
+.event-content__text {
+  margin: 0;
+  max-width: calc(var(--radius) * 130);
+}
+
+@media (min-width: 48rem) {
+  .event-detail {
+    padding: calc(var(--radius) * 4);
+  }
+
+  .event-detail-shell {
+    gap: calc(var(--radius) * 4);
+  }
+
+  .event-hero {
+    grid-template-columns: 1.6fr 1fr;
+    align-items: start;
+  }
+
+  .event-hero__content {
+    padding-top: calc(var(--radius) / 2);
+  }
+}
