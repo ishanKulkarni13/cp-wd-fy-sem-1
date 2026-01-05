@@ -1,0 +1,41 @@
+.culture {
+  padding: calc(var(--radius) * 3);
+}
+
+.culture-shell {
+  max-width: calc(var(--radius) * 150);
+  margin-inline: auto;
+  display: grid;
+  gap: calc(var(--radius) * 4);
+}
+
+.culture-header h1 {
+  margin: 0;
+}
+
+.culture-intro {
+  margin: calc(var(--radius) * 2) 0 0;
+  max-width: calc(var(--radius) * 125);
+}
+
+.culture-section {
+  display: grid;
+  gap: calc(var(--radius) * 2);
+}
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(var(--radius) * 36), 1fr));
+  gap: calc(var(--radius) * 2);
+}
+
+.culture-card__title {
+  margin: 0;
+  font-size: 1.05em;
+}
+
+@media (min-width: 48rem) {
+  .culture {
+    padding: calc(var(--radius) * 4);
+  }
+}
