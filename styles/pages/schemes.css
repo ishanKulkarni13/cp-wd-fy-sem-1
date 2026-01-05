@@ -1,0 +1,17 @@
+.schemes {
+  padding: calc(var(--radius) * 3);
+  max-width: calc(var(--radius) * 150);
+  margin-inline: auto;
+  display: grid;
+  gap: calc(var(--radius) * 2);
+}
+
+.schemes h1 {
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+  .schemes {
+    padding: calc(var(--radius) * 4);
+  }
+}
