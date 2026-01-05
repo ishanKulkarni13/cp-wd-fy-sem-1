@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/design-system/variables.css" />
     <link rel="stylesheet" href="../styles/design-system/components.css" />
     <link rel="stylesheet" href="../styles/globals.css" />
+    <link rel="stylesheet" href="../styles/pages/culture.css" />
   </head>
   <body>
     <!-- Canonical global navbar structure (to be reused across pages) -->
@@ -39,8 +40,50 @@
       </div>
     </nav>
 
-    <main>
-      <h1>Culture</h1>
+    <main class="culture">
+      <div class="culture-shell">
+        <header class="culture-header">
+          <h1>Indian Art and Culture</h1>
+          <p class="culture-intro text-muted">
+            India’s cultural identity is shaped by many languages, regions, and traditions. This page highlights key
+            areas of art and heritage that reflect the diversity of the nation.
+          </p>
+        </header>
+
+        <section class="culture-section" aria-label="Culture categories">
+          <div class="culture-grid">
+            <article class="card">
+              <div class="card__header"><h2 class="culture-card__title">Classical Dance</h2></div>
+              <div class="card__content"><p class="text-muted">Classical forms that combine rhythm, storytelling, and devotion.</p></div>
+            </article>
+
+            <article class="card">
+              <div class="card__header"><h2 class="culture-card__title">Music</h2></div>
+              <div class="card__content"><p class="text-muted">A rich tradition spanning classical, devotional, and regional styles.</p></div>
+            </article>
+
+            <article class="card">
+              <div class="card__header"><h2 class="culture-card__title">Folk Arts</h2></div>
+              <div class="card__content"><p class="text-muted">Community-based performances and crafts passed across generations.</p></div>
+            </article>
+
+            <article class="card">
+              <div class="card__header"><h2 class="culture-card__title">Handicrafts</h2></div>
+              <div class="card__content"><p class="text-muted">Skilled artisan work that reflects local materials and techniques.</p></div>
+            </article>
+
+            <article class="card">
+              <div class="card__header"><h2 class="culture-card__title">Literature</h2></div>
+              <div class="card__content"><p class="text-muted">Texts and oral traditions that record history, values, and ideas.</p></div>
+            </article>
+
+            <article class="card">
+              <div class="card__header"><h2 class="culture-card__title">Heritage Sites</h2></div>
+              <div class="card__content"><p class="text-muted">Monuments and places that preserve India’s architectural legacy.</p></div>
+            </article>
+          </div>
+        </section>
+      </div>
     </main>
 
     <script src="../scripts/app.js" defer></script>
