@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/design-system/variables.css" />
     <link rel="stylesheet" href="../styles/design-system/components.css" />
     <link rel="stylesheet" href="../styles/globals.css" />
+    <link rel="stylesheet" href="../styles/pages/gallery.css" />
   </head>
   <body>
     <!-- Canonical global navbar structure (to be reused across pages) -->
@@ -39,8 +40,61 @@
       </div>
     </nav>
 
-    <main>
-      <h1>Gallery</h1>
+    <main class="gallery">
+      <div class="gallery-shell">
+        <header class="gallery-header">
+          <h1>Cultural Gallery</h1>
+          <p class="gallery-intro text-muted">
+            A curated visual overview of cultural forms and heritage themes. Placeholders are used here for layout
+            and presentation.
+          </p>
+        </header>
+
+        <section class="gallery-section" aria-label="Gallery items">
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <div class="gallery-item__media" aria-hidden="true"></div>
+              <figcaption class="gallery-item__caption">Classical Dance</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <div class="gallery-item__media" aria-hidden="true"></div>
+              <figcaption class="gallery-item__caption">Folk Art</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <div class="gallery-item__media" aria-hidden="true"></div>
+              <figcaption class="gallery-item__caption">Handicrafts</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <div class="gallery-item__media" aria-hidden="true"></div>
+              <figcaption class="gallery-item__caption">Heritage Sites</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <div class="gallery-item__media" aria-hidden="true"></div>
+              <figcaption class="gallery-item__caption">Traditional Music</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <div class="gallery-item__media" aria-hidden="true"></div>
+              <figcaption class="gallery-item__caption">Festivals</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <div class="gallery-item__media" aria-hidden="true"></div>
+              <figcaption class="gallery-item__caption">Museum Collections</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <div class="gallery-item__media" aria-hidden="true"></div>
+              <figcaption class="gallery-item__caption">Manuscripts</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <div class="gallery-item__media" aria-hidden="true"></div>
+              <figcaption class="gallery-item__caption">Architecture</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <div class="gallery-item__media" aria-hidden="true"></div>
+              <figcaption class="gallery-item__caption">Craft Workshops</figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
     </main>
 
     <script src="../scripts/app.js" defer></script>
