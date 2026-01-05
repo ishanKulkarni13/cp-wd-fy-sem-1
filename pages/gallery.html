@@ -10,6 +10,35 @@
     <link rel="stylesheet" href="../styles/globals.css" />
   </head>
   <body>
+    <!-- Canonical global navbar structure (to be reused across pages) -->
+    <nav class="site-nav" aria-label="Primary">
+      <div class="site-nav__inner">
+        <a class="site-nav__brand" href="index.html">Ministry of Culture, Govt. of India</a>
+
+        <button
+          class="site-nav__toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          Menu
+        </button>
+
+        <div class="site-nav__menu" id="primary-navigation">
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="site-nav__link" href="index.html">Home</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="about.html">About</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="culture.html">Culture</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="schemes.html">Schemes</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="events.html">Events</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="gallery.html">Gallery</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <main>
       <h1>Gallery</h1>
     </main>
