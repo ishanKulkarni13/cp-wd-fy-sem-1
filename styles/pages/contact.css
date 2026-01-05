@@ -1,18 +1,136 @@
 
+
 .contact {
 	padding: calc(var(--radius) * 3);
+}
+
+.contact-shell {
 	max-width: calc(var(--radius) * 150);
 	margin-inline: auto;
 	display: grid;
-	gap: calc(var(--radius) * 2);
+	gap: calc(var(--radius) * 3);
 }
 
-.contact h1 {
+.contact-header h1 {
 	margin: 0;
+}
+
+.contact-intro {
+	margin: calc(var(--radius) * 2) 0 0;
+	max-width: calc(var(--radius) * 125);
+}
+
+.contact-grid {
+	display: grid;
+	gap: calc(var(--radius) * 2);
+	align-items: start;
+}
+
+.contact-card__title {
+	margin: 0;
+	font-size: 1.1em;
+}
+
+.contact-ministry {
+	margin: 0;
+}
+
+.contact-address {
+	margin: calc(var(--radius) * 1.25) 0 0;
+	font-style: normal;
+	color: var(--muted-foreground);
+}
+
+.contact-meta {
+	margin: calc(var(--radius) * 2) 0 0;
+	display: grid;
+	gap: calc(var(--radius) * 1.5);
+}
+
+.contact-meta > div {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	column-gap: calc(var(--radius) * 2);
+	row-gap: calc(var(--radius) / 2);
+	align-items: baseline;
+}
+
+.contact-meta dt {
+	font-weight: 600;
+}
+
+.contact-meta dd {
+	margin: 0;
+	color: var(--muted-foreground);
+}
+
+.contact-link {
+	color: var(--foreground);
+	text-decoration: underline;
+	text-decoration-color: var(--border);
+}
+
+.contact-link:hover {
+	color: var(--primary);
+	text-decoration-color: var(--primary);
+}
+
+.contact-form {
+	width: 100%;
+}
+
+.contact-form__grid {
+	display: grid;
+	gap: calc(var(--radius) * 1.5);
+}
+
+.contact-field {
+	display: grid;
+	gap: calc(var(--radius) / 1.5);
+}
+
+.contact-label {
+	font-weight: 600;
+}
+
+.contact-input,
+.contact-textarea {
+	width: 100%;
+	border: 1px solid var(--input);
+	border-radius: var(--radius);
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-sans);
+	font-size: 1em;
+	line-height: 1.4;
+	padding: calc(var(--radius) * 1.25);
+}
+
+.contact-textarea {
+	resize: vertical;
+}
+
+.contact-form__actions {
+	margin-top: calc(var(--radius) * 2);
+	display: flex;
+	justify-content: flex-start;
 }
 
 @media (min-width: 48rem) {
 	.contact {
 		padding: calc(var(--radius) * 4);
+	}
+
+	.contact-grid {
+		grid-template-columns: 1fr 1fr;
+		gap: calc(var(--radius) * 3);
+	}
+
+	.contact-form__grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.contact-field--full {
+		grid-column: 1 / -1;
 	}
 }
