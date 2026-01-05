@@ -9,6 +9,15 @@
 
 .home-section {
 	margin-top: calc(var(--radius) * 4);
+	padding-block: calc(var(--radius) * 5);
+}
+
+.home-section--plain {
+	background: transparent;
+}
+
+.home-section--tint {
+	background: var(--muted);
 }
 
 .home-section__head {
@@ -16,10 +25,15 @@
 	align-items: baseline;
 	justify-content: space-between;
 	gap: calc(var(--radius) * 2);
+	margin-bottom: calc(var(--radius) * 2);
 }
 
 .home-section__title {
 	margin: 0;
+	font-weight: 700;
+	line-height: 1.2;
+	padding-left: calc(var(--radius) * 2);
+	border-left: calc(var(--radius) / 4) solid var(--primary);
 }
 
 .home-link {
