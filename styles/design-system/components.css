@@ -1,0 +1,99 @@
+/*
+	Shared component layer (shadcn-style)
+	- Themeable via CSS variables only
+	- No layout utilities, no page styles, no animations
+*/
+
+/* Focus styles (accessible focus-visible ring) */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+	box-shadow: 0 0 0 2px var(--ring);
+}
+
+/* Button (base + variants) */
+.btn {
+	appearance: none;
+	background: transparent;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	color: var(--foreground);
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--font-sans);
+	font-weight: 600;
+	line-height: 1;
+	text-decoration: none;
+	user-select: none;
+	white-space: nowrap;
+	padding: 0.5rem 0.875rem;
+}
+
+.btn:disabled,
+.btn[aria-disabled='true'] {
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+.btn--primary {
+	background: var(--primary);
+	border-color: var(--primary);
+	color: var(--primary-foreground);
+}
+
+.btn--secondary {
+	background: var(--secondary);
+	border-color: var(--border);
+	color: var(--secondary-foreground);
+}
+
+.btn--ghost {
+	background: transparent;
+	border-color: transparent;
+	color: var(--foreground);
+}
+
+.btn--ghost:hover {
+	background: var(--accent);
+	color: var(--accent-foreground);
+}
+
+.btn--destructive {
+	background: var(--destructive);
+	border-color: var(--destructive);
+	color: var(--destructive-foreground);
+}
+
+/* Card (base + sections) */
+.card {
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow-sm);
+	color: var(--card-foreground);
+}
+
+.card__header {
+	padding: 1rem;
+}
+
+.card__content {
+	padding: 1rem;
+}
+
+.card__footer {
+	padding: 1rem;
+	border-top: 1px solid var(--border);
+}
+
+/* Text utilities */
+.text-muted {
+	color: var(--muted-foreground);
+}
+
+.text-small {
+	font-size: 0.875em;
+	line-height: 1.4;
+}
