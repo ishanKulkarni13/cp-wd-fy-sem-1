@@ -50,6 +50,55 @@ function initNavbar() {
 	}
 }
 
+function initViewTransitionNavigation() {
+	const nav = document.querySelector('.site-nav');
+	if (!nav) return;
+
+	// Progressive enhancement: only controls timing, never animates.
+	const canUseViewTransitions =
+		typeof document !== 'undefined' &&
+		'startViewTransition' in document &&
+		typeof document.startViewTransition === 'function';
+
+	nav.addEventListener('click', (event) => {
+		if (!(event instanceof MouseEvent)) return;
+		if (event.defaultPrevented) return;
+
+		// Ignore modifier clicks and non-left clicks (new tab/window behavior)
+		if (event.button !== 0) return;
+		if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+		const target = event.target;
+		if (!(target instanceof Element)) return;
+
+		// Target only internal navbar links
+		const link = target.closest('a.site-nav__link');
+		if (!(link instanceof HTMLAnchorElement)) return;
+		if (link.target && link.target.toLowerCase() === '_blank') return;
+
+		const href = link.getAttribute('href');
+		if (!href) return;
+
+		const url = new URL(href, window.location.href);
+		const isExternal = url.origin !== window.location.origin;
+		if (isExternal) return;
+
+		// If it's just an in-page anchor, let the browser handle it.
+		const sameDocument =
+			url.pathname === window.location.pathname && url.search === window.location.search;
+		if (sameDocument && url.hash) return;
+
+		if (!canUseViewTransitions) return;
+
+		event.preventDefault();
+		// Cross-document view transition: navigate inside the callback.
+		document.startViewTransition(() => {
+			window.location.href = url.href;
+		});
+	});
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	initNavbar();
+	initViewTransitionNavigation();
 });

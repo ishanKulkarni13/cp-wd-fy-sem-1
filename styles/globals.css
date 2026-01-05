@@ -62,3 +62,46 @@ canvas {
 	max-width: 100%;
 	height: auto;
 }
+
+/*
+	View Transitions (progressive enhancement)
+	- Subtle fade + slight vertical movement between routes
+	- Respects prefers-reduced-motion
+*/
+
+::view-transition-old(root) {
+	animation: vt-fade-out 360ms ease both;
+}
+
+::view-transition-new(root) {
+	animation: vt-fade-in 360ms ease both;
+}
+
+@keyframes vt-fade-out {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-0.5rem);
+	}
+}
+
+@keyframes vt-fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(0.5rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	::view-transition-old(root),
+	::view-transition-new(root) {
+		animation-duration: 1ms;
+	}
+}
