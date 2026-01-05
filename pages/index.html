@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="../styles/design-system/variables.css" />
 		<link rel="stylesheet" href="../styles/design-system/components.css" />
 		<link rel="stylesheet" href="../styles/globals.css" />
+		<link rel="stylesheet" href="../styles/pages/home.css" />
 	</head>
 	<body>
 		<!-- Canonical global navbar structure (to be reused across pages) -->
@@ -40,8 +41,101 @@
 			</div>
 		</nav>
 
-		<main>
-			<!-- Page content will be added later -->
+		<main class="home">
+			<section class="home-hero" aria-label="Introduction">
+				<div class="home-shell">
+					<h1 class="home-hero__title">Celebrating India’s Living Heritage</h1>
+					<p class="home-hero__subtitle text-muted">
+						Programs, schemes, and initiatives that preserve culture and promote creative traditions.
+					</p>
+					<a class="btn btn--primary" href="schemes.html">Explore Schemes</a>
+				</div>
+			</section>
+
+			<section class="home-section" aria-label="About">
+				<div class="home-shell home-split">
+					<div class="card">
+						<div class="card__header">
+							<h2 class="home-section__title">About the Ministry</h2>
+						</div>
+						<div class="card__content">
+							<p class="home-section__text">
+								The Ministry of Culture works to safeguard India’s tangible and intangible heritage, support
+								cultural institutions, and enable access to arts and knowledge across the country.
+							</p>
+							<a class="home-link" href="about.html">Read more</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="home-section" aria-label="Cultural highlights">
+				<div class="home-shell">
+					<h2 class="home-section__title">Cultural Highlights</h2>
+					<div class="home-grid">
+						<article class="card">
+							<div class="card__header"><h3 class="home-card__title">Museums & Collections</h3></div>
+							<div class="card__content"><p class="text-muted">Explore nationally significant artefacts and archives.</p></div>
+						</article>
+						<article class="card">
+							<div class="card__header"><h3 class="home-card__title">Performing Arts</h3></div>
+							<div class="card__content"><p class="text-muted">Support for music, dance, theatre, and folk traditions.</p></div>
+						</article>
+						<article class="card">
+							<div class="card__header"><h3 class="home-card__title">Heritage Sites</h3></div>
+							<div class="card__content"><p class="text-muted">Conservation initiatives for monuments and heritage precincts.</p></div>
+						</article>
+						<article class="card">
+							<div class="card__header"><h3 class="home-card__title">Grants & Fellowships</h3></div>
+							<div class="card__content"><p class="text-muted">Opportunities that encourage research and creative work.</p></div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="home-section" aria-label="Events">
+				<div class="home-shell">
+					<div class="home-section__head">
+						<h2 class="home-section__title">Events</h2>
+						<a class="home-link" href="events.html">View all</a>
+					</div>
+					<ul class="home-list">
+						<li class="home-list__item card">
+							<div class="card__content">
+								<strong>Public Lectures</strong>
+								<span class="text-muted">Talks and discussions on heritage and the arts.</span>
+							</div>
+						</li>
+						<li class="home-list__item card">
+							<div class="card__content">
+								<strong>Exhibitions</strong>
+								<span class="text-muted">Curated displays from museums and cultural institutions.</span>
+							</div>
+						</li>
+						<li class="home-list__item card">
+							<div class="card__content">
+								<strong>Festivals</strong>
+								<span class="text-muted">Celebrations showcasing regional traditions and crafts.</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="home-section" aria-label="Gallery preview">
+				<div class="home-shell">
+					<div class="home-section__head">
+						<h2 class="home-section__title">Gallery</h2>
+						<a class="home-link" href="gallery.html">Open gallery</a>
+					</div>
+					<div class="home-gallery">
+						<div class="home-gallery__tile" role="img" aria-label="Gallery image placeholder"></div>
+						<div class="home-gallery__tile" role="img" aria-label="Gallery image placeholder"></div>
+						<div class="home-gallery__tile" role="img" aria-label="Gallery image placeholder"></div>
+						<div class="home-gallery__tile" role="img" aria-label="Gallery image placeholder"></div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<script src="../scripts/app.js" defer></script>
