@@ -128,6 +128,51 @@
 	gap: calc(var(--radius) * 2);
 }
 
+.home-gallery-carousel {
+	margin-top: calc(var(--radius) * 2);
+	max-width: calc(var(--radius) * 150);
+	margin-inline: auto;
+}
+
+.home-gallery-carousel .carousel {
+	border-radius: var(--radius);
+	box-shadow: var(--shadow-sm);
+	border: 1px solid var(--border);
+	overflow: hidden;
+	background: var(--muted);
+}
+
+.home-gallery-carousel .carousel-item {
+	aspect-ratio: 16 / 9;
+}
+
+.home-gallery-carousel .carousel-item > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.home-gallery-carousel .carousel-caption {
+	left: calc(var(--radius) * 1.25);
+	right: calc(var(--radius) * 1.25);
+	bottom: calc(var(--radius) * 1.25);
+	text-align: left;
+	padding: calc(var(--radius) * 1);
+	border-radius: calc(var(--radius) - 2px);
+	background: color-mix(in oklab, var(--background), transparent 25%);
+	color: var(--foreground);
+}
+
+.home-gallery-carousel .carousel-caption h3 {
+	margin: 0;
+	font-size: 1.1em;
+}
+
+.home-gallery-carousel .carousel-caption p {
+	margin: calc(var(--radius) / 2) 0 0;
+	color: var(--muted-foreground);
+}
+
 .home-gallery__tile {
 	border: 1px solid var(--border);
 	border-radius: var(--radius);
