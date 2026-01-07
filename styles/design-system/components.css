@@ -148,7 +148,26 @@
 	padding: var(--radius);
 }
 
+.site-nav__a11y {
+	appearance: none;
+	background: transparent;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	color: var(--foreground);
+	cursor: pointer;
+	font-family: var(--font-sans);
+	font-weight: 600;
+	line-height: 1;
+	padding: var(--radius);
+	margin-left: auto;
+}
+
 .site-nav__toggle:hover {
+	background: var(--accent);
+	color: var(--accent-foreground);
+}
+
+.site-nav__a11y:hover {
 	background: var(--accent);
 	color: var(--accent-foreground);
 }
