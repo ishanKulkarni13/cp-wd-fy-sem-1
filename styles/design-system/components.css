@@ -68,11 +68,15 @@
 
 /* Card (base + sections) */
 .card {
-	background: var(--card);
+	background: var(--card) !important;
 	border: 1px solid var(--border);
 	border-radius: var(--radius);
 	box-shadow: var(--shadow-sm);
-	color: var(--card-foreground);
+	color: var(--card-foreground) !important;
+}
+
+.text-muted-foreground{
+  color: var(--muted-foreground) !important;
 }
 
 .card__header {
@@ -146,6 +150,7 @@
 	font-weight: 600;
 	line-height: 1;
 	padding: var(--radius);
+	margin-left: auto;
 }
 
 .site-nav__a11y {
@@ -155,11 +160,27 @@
 	border-radius: var(--radius);
 	color: var(--foreground);
 	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	font-family: var(--font-sans);
 	font-weight: 600;
 	line-height: 1;
 	padding: var(--radius);
-	margin-left: auto;
+}
+
+.site-nav__a11y svg {
+	width: 1.125rem;
+	height: 1.125rem;
+	display: block;
+}
+
+.site-nav__divider {
+	display: none;
+	width: 1px;
+	height: calc(var(--radius) * 4);
+	background: var(--border);
+	opacity: 0.9;
 }
 
 .site-nav__toggle:hover {
@@ -217,6 +238,11 @@
 	}
 
 	.site-nav__menu {
+		display: block;
+		margin-left: auto;
+	}
+
+	.site-nav__divider {
 		display: block;
 	}
 

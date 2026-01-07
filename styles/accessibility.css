@@ -121,3 +121,9 @@ body.dark-contrast {
 	--chart-4: oklch(0.84 0.2 25);
 	--chart-5: oklch(0.88 0.12 320);
 }
+
+/* Invert colors (global, independent of theme)
+   Allowed to combine with body.dark-contrast. */
+body.invert {
+	filter: invert(1) hue-rotate(180deg);
+}

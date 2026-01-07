@@ -20,6 +20,7 @@ html {
 
 body {
 	background: var(--background);
+  color: red;
 	color: var(--foreground);
 	font-family: var(--font-sans);
 }
@@ -68,3 +69,4 @@ canvas {
 @view-transition{
   navigation: auto;
 }
+

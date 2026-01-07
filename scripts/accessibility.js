@@ -4,6 +4,7 @@
 	'use strict';
 
 	const STORAGE_KEY = 'theme';
+	const INVERT_KEY = 'invert';
 	const THEME_DARK_CONTRAST = 'dark-contrast';
 	const THEME_LIGHT = 'light';
 
@@ -18,6 +19,22 @@
 	function safeSetStoredTheme(theme) {
 		try {
 			localStorage.setItem(STORAGE_KEY, theme);
+		} catch {
+			// ignore (privacy mode / blocked storage)
+		}
+	}
+
+	function safeGetStoredInvert() {
+		try {
+			return localStorage.getItem(INVERT_KEY);
+		} catch {
+			return null;
+		}
+	}
+
+	function safeSetStoredInvert(value) {
+		try {
+			localStorage.setItem(INVERT_KEY, value);
 		} catch {
 			// ignore (privacy mode / blocked storage)
 		}
@@ -57,6 +74,19 @@
 		setTheme(body, THEME_LIGHT, { persist: false });
 	}
 
+	function initInvertFromStorage(body) {
+		// Invert is independent of theme (allowed to combine with dark-contrast).
+		const storedInvert = safeGetStoredInvert();
+		if (storedInvert === 'true') {
+			body.classList.add('invert');
+		}
+	}
+
+	function setInvert(body, enabled, { persist }) {
+		body.classList.toggle('invert', enabled);
+		if (persist) safeSetStoredInvert(enabled ? 'true' : 'false');
+	}
+
 	function isModalOpen(body) {
 		return body.classList.contains('a11y-open');
 	}
@@ -89,7 +119,8 @@
 		}
 
 		if (action === 'invert') {
-			// Exists in UI but intentionally unimplemented for now.
+			const enabling = !body.classList.contains('invert');
+			setInvert(body, enabling, { persist: true });
 			return;
 		}
 	}
@@ -100,6 +131,7 @@
 
 		// 1) Theme persistence
 		initThemeFromStorage(body);
+		initInvertFromStorage(body);
 
 		// 2) Modal behavior
 		const toggle = document.querySelector('[data-a11y-toggle]');
