@@ -1,0 +1,77 @@
+/* Accessibility modal (no JS yet; hidden by default) */
+
+.accessibility-backdrop {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 90;
+	background: color-mix(in oklab, var(--background), transparent 35%);
+}
+
+.accessibility-modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+	width: min(42rem, calc(100vw - 2rem));
+	max-height: calc(100vh - 2rem);
+	overflow: auto;
+	background: var(--background);
+	color: var(--foreground);
+	border: 1px solid var(--border);
+	border-radius: calc(var(--radius) * 2);
+	box-shadow: var(--shadow-lg);
+	padding: 1.25rem;
+}
+
+.accessibility-modal[data-open='true'] {
+	display: block;
+}
+
+.accessibility-backdrop[data-open='true'] {
+	display: block;
+}
+
+.accessibility-modal h2 {
+	margin: 0 0 1rem;
+	line-height: 1.15;
+}
+
+.accessibility-modal > :where(.accessibility-card + .accessibility-card) {
+	margin-top: calc(var(--radius) * 2);
+}
+
+.accessibility-card {
+	background: var(--card);
+	color: var(--card-foreground);
+	border: 1px solid var(--border);
+	border-radius: calc(var(--radius) * 1.5);
+	box-shadow: var(--shadow-sm);
+	padding: 1rem;
+}
+
+.accessibility-card h3 {
+	margin: 0;
+	font-size: 1.05em;
+	line-height: 1.25;
+}
+
+.accessibility-card p {
+	margin: calc(var(--radius) * 1.25) 0 0;
+}
+
+.accessibility-actions {
+	margin-top: calc(var(--radius) * 3);
+	display: flex;
+	justify-content: flex-end;
+	gap: calc(var(--radius) * 1.5);
+	flex-wrap: wrap;
+}
+
+@media (min-width: 48rem) {
+	.accessibility-modal {
+		padding: 1.5rem;
+	}
+}
