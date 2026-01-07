@@ -104,6 +104,63 @@
   gap: calc(var(--radius) * 2);
 }
 
+/* Gallery cards (real items: image + title + date/items) */
+.gallery-card {
+  display: grid;
+  gap: calc(var(--radius) * 1.25);
+}
+
+.gallery-card__link {
+  display: grid;
+  gap: calc(var(--radius) * 1.25);
+  color: inherit;
+  text-decoration: none;
+}
+
+.gallery-card__link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: calc(var(--radius) + 4px);
+}
+
+.gallery-card__media {
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) * 1.25);
+  background: var(--muted);
+  box-shadow: var(--shadow-2xs);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-card__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.gallery-card__title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: var(--foreground);
+}
+
+.gallery-card__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: calc(var(--radius) * 2);
+  color: var(--muted-foreground);
+  font-size: 0.95em;
+}
+
+.gallery-card__count {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
 .gallery-item {
   margin: 0;
   display: grid;
