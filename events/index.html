@@ -50,123 +50,236 @@
           </p>
         </header>
 
+        <form class="events-filters" id="eventsFilters" aria-label="Filter events">
+          <div class="events-filters__grid">
+            <label class="events-filter" for="filterCategory">
+              <span class="events-filter__label">Category</span>
+              <select class="events-filter__control" id="filterCategory" name="category">
+                <option value="">All categories</option>
+              </select>
+            </label>
+
+            <label class="events-filter" for="filterState">
+              <span class="events-filter__label">State</span>
+              <select class="events-filter__control" id="filterState" name="state">
+                <option value="">All states</option>
+              </select>
+            </label>
+
+            <label class="events-filter" for="filterCity">
+              <span class="events-filter__label">City</span>
+              <select class="events-filter__control" id="filterCity" name="city">
+                <option value="">All cities</option>
+              </select>
+            </label>
+          </div>
+
+          <button class="btn events-filters__clear" type="button" id="filtersClear">Clear all</button>
+        </form>
+
         <section class="events-section" aria-label="Upcoming events">
           <div class="events-list">
-            <article class="card events-item events-item--heritage-week" aria-label="National Heritage Week">
-              <div class="card__header events-item__header">
-                <a class="events-item__head" href="/events/national-heritage-week/">
+            <article class="card events-card" data-category="Seminar/Symposium/Workshops" data-venue="Patna">
+              <a
+                class="events-card__link"
+                href="https://culturematrix.online/event/1119"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Aakhar Era and Maithili Akavita (opens in a new tab)"
+              >
+                <div class="events-card__media">
                   <img
-                    class="events-thumb"
-                    src="../assets/images/events/heritage-week.jpg"
-                    alt="National Heritage Week"
+                    class="events-card__img"
+                    src="https://culturematrix.online/myapp/img/opt/63cf17d6-4a18-4bdf-a3af-10e6273a99c6.jpg?w=600&amp;max_kb=90?w=200&amp;max_kb=20"
+                    alt="Aakhar Era and Maithili Akavita"
                     loading="lazy"
                     decoding="async"
-
                   />
-                  <h2 class="events-title"  >National Heritage Week</h2>
-                </a>
-              </div>
-              <div class="card__content">
-                <dl class="events-meta">
-                  <div><dt>Date</dt><dd><time datetime="2026-02-10">10 Feb 2026</time></dd></div>
-                  <div><dt>Location</dt><dd>New Delhi</dd></div>
-                  <div><dt>Overview</dt><dd>A week of public talks, guided walks, and museum activities.</dd></div>
-                </dl>
-              </div>
+                </div>
+                <div class="events-card__content">
+                  <h2 class="events-card__title">Aakhar Era and Maithili Akavita</h2>
+                  <dl class="events-card__meta">
+                    <div><dt>Start Date</dt><dd><time datetime="2026-01-16">16-01-2026</time></dd></div>
+                    <div><dt>Event</dt><dd>Seminar/Symposium/Workshops</dd></div>
+                    <div><dt>Venue</dt><dd class="events-card__venue">Patna</dd></div>
+                    <div><dt>Time</dt><dd>10:30</dd></div>
+                  </dl>
+                  <span class="events-card__cta" aria-hidden="true">→</span>
+                </div>
+              </a>
             </article>
 
-            <article class="card events-item" aria-label="Folk Arts Showcase">
-              <div class="card__header events-item__header">
-                <div class="events-item__head">
+            <article class="card events-card" data-category="Other" data-venue="Purbashree Auditorium, EZCC, Kolkata">
+              <a
+                class="events-card__link"
+                href="https://culturematrix.online/event/1113"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Bharatiyam Mahotsav (opens in a new tab)"
+              >
+                <div class="events-card__media">
                   <img
-                    class="events-thumb"
-                    src="../assets/images/events/folk-arts.jpg"
-                    alt="Folk Arts Showcase"
+                    class="events-card__img"
+                    src="https://culturematrix.online/myapp/img/opt/d34ca552-817e-4be4-a4e7-43c75e56038b.jpg?w=600&amp;max_kb=90?w=200&amp;max_kb=20"
+                    alt="Bharatiyam Mahotsav"
                     loading="lazy"
                     decoding="async"
                   />
-                  <h2 class="events-title">Folk Arts Showcase</h2>
                 </div>
-              </div>
-              <div class="card__content">
-                <dl class="events-meta">
-                  <div><dt>Date</dt><dd><time datetime="2026-03-05">05 Mar 2026</time></dd></div>
-                  <div><dt>Location</dt><dd>Jaipur</dd></div>
-                  <div><dt>Overview</dt><dd>Performances and demonstrations from regional folk traditions.</dd></div>
-                </dl>
-              </div>
+                <div class="events-card__content">
+                  <h2 class="events-card__title">Bharatiyam Mahotsav</h2>
+                  <dl class="events-card__meta">
+                    <div><dt>Start Date</dt><dd><time datetime="2026-01-12">12-01-2026</time></dd></div>
+                    <div><dt>Event</dt><dd>Other</dd></div>
+                    <div><dt>Venue</dt><dd class="events-card__venue">Purbashree Auditorium, EZCC, Kolkata</dd></div>
+                    <div><dt>Time</dt><dd>18:00</dd></div>
+                  </dl>
+                  <span class="events-card__cta" aria-hidden="true">→</span>
+                </div>
+              </a>
             </article>
 
-            <article class="card events-item" aria-label="Crafts and Handloom Fair">
-              <div class="card__header events-item__header">
-                <div class="events-item__head">
+            <article class="card events-card" data-category="Literary Forums" data-venue="Mangalore">
+              <a
+                class="events-card__link"
+                href="https://culturematrix.online/event/1096"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Kavisandhi (opens in a new tab)"
+              >
+                <div class="events-card__media">
                   <img
-                    class="events-thumb"
-                    src="../assets/images/events/handicrafts.jpg"
-                    alt="Crafts and Handloom Fair"
+                    class="events-card__img"
+                    src="https://culturematrix.online/myapp/img/opt/b4150be4-b9f4-4a97-8549-83e6ae3aae12.jpg?w=600&amp;max_kb=90?w=200&amp;max_kb=20"
+                    alt="Kavisandhi"
                     loading="lazy"
                     decoding="async"
                   />
-                  <h2 class="events-title">Crafts and Handloom Fair</h2>
                 </div>
-              </div>
-              <div class="card__content">
-                <dl class="events-meta">
-                  <div><dt>Date</dt><dd><time datetime="2026-04-18">18 Apr 2026</time></dd></div>
-                  <div><dt>Location</dt><dd>Ahmedabad</dd></div>
-                  <div><dt>Overview</dt><dd>Artisan stalls and workshops highlighting traditional craft practices.</dd></div>
-                </dl>
-              </div>
+                <div class="events-card__content">
+                  <h2 class="events-card__title">Kavisandhi</h2>
+                  <dl class="events-card__meta">
+                    <div><dt>Start Date</dt><dd><time datetime="2026-01-11">11-01-2026</time></dd></div>
+                    <div><dt>Event</dt><dd>Literary Forums</dd></div>
+                    <div><dt>Venue</dt><dd class="events-card__venue">Mangalore</dd></div>
+                    <div><dt>Time</dt><dd>11:30</dd></div>
+                  </dl>
+                  <span class="events-card__cta" aria-hidden="true">→</span>
+                </div>
+              </a>
             </article>
 
-            <article class="card events-item" aria-label="Classical Music Evening">
-              <div class="card__header events-item__header">
-                <div class="events-item__head">
+            <article
+              class="card events-card"
+              data-category="Seminar/Symposium/Workshops"
+              data-venue="Sree Sankaracharya University of Sanskrit, Kalady, Kerala"
+            >
+              <a
+                class="events-card__link"
+                href="https://culturematrix.online/event/1116"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="National Seminar in Sanskrit Sankaramanisa (opens in a new tab)"
+              >
+                <div class="events-card__media">
                   <img
-                    class="events-thumb"
-                    src="../assets/images/events/classical-music.jpg"
-                    alt="Classical Music Evening"
+                    class="events-card__img"
+                    src="https://culturematrix.online/myapp/img/opt/49a7f599-5b65-4288-9f28-323779ddc3f7.jpg?w=600&amp;max_kb=90?w=200&amp;max_kb=20"
+                    alt="National Seminar in Sanskrit Sankaramanisa"
                     loading="lazy"
                     decoding="async"
                   />
-                  <h2 class="events-title">Classical Music Evening</h2>
                 </div>
-              </div>
-              <div class="card__content">
-                <dl class="events-meta">
-                  <div><dt>Date</dt><dd><time datetime="2026-06-12">12 Jun 2026</time></dd></div>
-                  <div><dt>Location</dt><dd>Kolkata</dd></div>
-                  <div><dt>Overview</dt><dd>A curated concert featuring leading classical vocal and instrumental artists.</dd></div>
-                </dl>
-              </div>
+                <div class="events-card__content">
+                  <h2 class="events-card__title">National Seminar in Sanskrit Sankaramanisa</h2>
+                  <dl class="events-card__meta">
+                    <div><dt>Start Date</dt><dd><time datetime="2026-01-09">09-01-2026</time></dd></div>
+                    <div><dt>Event</dt><dd>Seminar/Symposium/Workshops</dd></div>
+                    <div><dt>Venue</dt><dd class="events-card__venue">Sree Sankaracharya University of Sanskrit, Kalady, Kerala</dd></div>
+                    <div><dt>Time</dt><dd>10:30</dd></div>
+                  </dl>
+                  <span class="events-card__cta" aria-hidden="true">→</span>
+                </div>
+              </a>
             </article>
 
-            <article class="card events-item" aria-label="Museum Education Day">
-              <div class="card__header events-item__header">
-                <div class="events-item__head">
+            <article
+              class="card events-card"
+              data-category="Dance"
+              data-venue="Hindu Mission Rakhsya Ground, Jhargram, West Bengal"
+            >
+              <a
+                class="events-card__link"
+                href="https://culturematrix.online/event/1106"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pous Parav (opens in a new tab)"
+              >
+                <div class="events-card__media">
                   <img
-                    class="events-thumb"
-                    src="../assets/images/events/museum-education.jpg"
-                    alt="Museum Education Day"
+                    class="events-card__img"
+                    src="https://culturematrix.online/myapp/img/opt/cdc46c81-22d9-454c-946b-115ebb7f955d.jpg?w=600&amp;max_kb=90?w=200&amp;max_kb=20"
+                    alt="Pous Parav"
                     loading="lazy"
                     decoding="async"
                   />
-                  <h2 class="events-title">Museum Education Day</h2>
                 </div>
-              </div>
-              <div class="card__content">
-                <dl class="events-meta">
-                  <div><dt>Date</dt><dd><time datetime="2026-08-21">21 Aug 2026</time></dd></div>
-                  <div><dt>Location</dt><dd>Bengaluru</dd></div>
-                  <div><dt>Overview</dt><dd>Workshops and sessions for students, educators, and families.</dd></div>
-                </dl>
-              </div>
+                <div class="events-card__content">
+                  <h2 class="events-card__title">Pous Parav</h2>
+                  <dl class="events-card__meta">
+                    <div><dt>Start Date</dt><dd><time datetime="2026-01-07">07-01-2026</time></dd></div>
+                    <div><dt>Event</dt><dd>Dance</dd></div>
+                    <div><dt>Venue</dt><dd class="events-card__venue">Hindu Mission Rakhsya Ground, Jhargram, West Bengal</dd></div>
+                    <div><dt>Time</dt><dd>10:00</dd></div>
+                  </dl>
+                  <span class="events-card__cta" aria-hidden="true">→</span>
+                </div>
+              </a>
+            </article>
+
+            <article
+              class="card events-card"
+              data-category="Seminar/Symposium/Workshops"
+              data-venue="University of Gour Banga, Malda, West Bengal."
+            >
+              <a
+                class="events-card__link"
+                href="https://culturematrix.online/event/1115"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Tradition of Translation in Sanskrit Literature (opens in a new tab)"
+              >
+                <div class="events-card__media">
+                  <img
+                    class="events-card__img"
+                    src="https://culturematrix.online/myapp/img/opt/5b70759b-0d6d-46c9-bc9d-561230105647.jpg?w=600&amp;max_kb=90?w=200&amp;max_kb=20"
+                    alt="Tradition of Translation in Sanskrit Literature"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="events-card__content">
+                  <h2 class="events-card__title">Tradition of Translation in Sanskrit Literature</h2>
+                  <dl class="events-card__meta">
+                    <div><dt>Start Date</dt><dd><time datetime="2026-01-07">07-01-2026</time></dd></div>
+                    <div><dt>Event</dt><dd>Seminar/Symposium/Workshops</dd></div>
+                    <div><dt>Venue</dt><dd class="events-card__venue">University of Gour Banga, Malda, West Bengal.</dd></div>
+                    <div><dt>Time</dt><dd>10:30</dd></div>
+                  </dl>
+                  <span class="events-card__cta" aria-hidden="true">→</span>
+                </div>
+              </a>
             </article>
           </div>
+
+          <p class="events-empty text-muted" id="eventsEmpty" role="status" aria-live="polite" hidden>
+            No events match your selected filters.
+          </p>
         </section>
       </div>
     </main>
 
     <script src="../scripts/app.js" defer></script>
+    <script src="../scripts/pages/events.js" defer></script>
   </body>
 </html>
